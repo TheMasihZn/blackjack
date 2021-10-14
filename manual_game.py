@@ -1,13 +1,14 @@
-from blackjack import BlackJack
+from blackjack import BlackJack, sample_names
 
 
 while True:
-    print('number of players: ')
+    print('number of players:  (max=8)')
     try:
         n = int(input())
     except ValueError:
         continue
-    break
+    if n <= len(sample_names):
+    	break
 
 game = BlackJack(n)
 
